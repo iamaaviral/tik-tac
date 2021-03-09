@@ -24,6 +24,7 @@ const Grid = (props) => {
     </div>
     <div className="grid-turn">{`turn: ${props.turn}`}</div>
     {props.winner ? <div className="grid-result">{`player with ${(props.turn === 'cross') ? 'circle' : 'cross'} won` }</div>: null}
+    {(!(props.data.filter((grid) => grid === null)).length && !props.winner) ? <div className="grid-result">Match draw!!!</div>: null}
     </>)
 }
 
