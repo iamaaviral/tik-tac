@@ -17,7 +17,7 @@ function App() {
         data={data}
         winner={winner}
         setGrid = {(index) => {
-          if(!winner) {
+          if(!data[index] && !winner) {
             const newData = data;
             newData[index] = turn;
             setData([...newData])
